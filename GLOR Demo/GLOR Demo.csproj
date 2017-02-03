@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1018D59-A88E-4BBF-84A6-692CE68765D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GLOR_Demo</RootNamespace>
+    <AssemblyName>GLOR Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControl\NodeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataClasses\AddressClass.cs" />
+    <Compile Include="DataClasses\GlobalVariables.cs" />
+    <Compile Include="DataClasses\PacketClass.cs" />
+    <Compile Include="DataClasses\WebRegister.cs" />
+    <Compile Include="Drawing\DrawingPen.cs" />
+    <Compile Include="Drawing\RouteLine.cs" />
+    <Compile Include="GLOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GLOR.Designer.cs">
+      <DependentUpon>GLOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GLOR.resx">
+      <DependentUpon>GLOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cell-phone-icon-png--clipart-best-33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp_mobile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp_zune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile1_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile2_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile3_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iPad40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iPhone40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laptop_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile1_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile2_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile3_40.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
